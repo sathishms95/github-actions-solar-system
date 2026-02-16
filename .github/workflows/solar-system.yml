@@ -12,8 +12,6 @@ env:
   MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}       
 jobs:
     unit-testing:
-      strategy:
-        max_parallel: 2
       name: Unit Testing
       runs-on: [ubuntu-latest]
       steps:
@@ -63,6 +61,7 @@ jobs:
             name: Code-Coverage-Result
             path: coverage
             retention-days: 5
+
 
 
 
